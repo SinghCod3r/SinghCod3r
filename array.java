@@ -8,7 +8,7 @@ public class array{
         Arrays.sort(arr);
         
 
-        System.out.println(arr[arr.length-3]);
-        System.out.println(arr[2]);
+        System.out.println(arr[arr.length-2]);
+        System.out.println(arr[1]);
     }
 }
