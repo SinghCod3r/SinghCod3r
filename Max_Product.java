@@ -12,6 +12,5 @@ public class Max_Product{
     product2 = arr[0]*arr[1]*arr[2];
     System.out.println(product1);
     System.out.println(product2);
-    
   }
 }
