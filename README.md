@@ -28,16 +28,5 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=singhcod3r&show_icons=true&locale=en" alt="singhcod3r" /></p>
 
 # Badges 
-<a href="https://holopin.io/@singhcod3r" target="_blank">
-  <img src="https://holopin.me/singhcod3r" alt="An image of @singhcod3r's Holopin badges" class="holopin-badge" />
-</a>
-
-<style>
-  .holopin-badge {
-    background: transparent;
-    mix-blend-mode: multiply; /* or lighten, depending on background */
-    border-radius: 8px; /* optional: round corners */
-    max-width: 100%;
-  }
-</style>
+[![An image of @singhcod3r's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/singhcod3r)](https://holopin.io/@singhcod3r)
 
