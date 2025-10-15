@@ -28,4 +28,4 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=singhcod3r&show_icons=true&locale=en" alt="singhcod3r" /></p>
 
 # Badges 
-[![Holopin](https://holopin.me/singhcod3r)](https://holopin.io/@singhcod3r)
+[![Holopin](https://holopin.me/singhcod3r/?style=flat-square)](https://holopin.io/@singhcod3r)
