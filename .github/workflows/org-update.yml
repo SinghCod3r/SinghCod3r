@@ -13,6 +13,9 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v4
 
+    - name: Install jq
+      run: sudo apt-get install jq -y
+
     - name: Fetch Pull Request events
       run: |
         curl -H "Accept: application/vnd.github+json" \
