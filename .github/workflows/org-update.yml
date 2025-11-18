@@ -10,32 +10,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v4
+      - name: Checkout Repo
+        uses: actions/checkout@v4
 
-    - name: Install jq
-      run: sudo apt-get install jq -y
+      - name: Install jq
+        run: sudo apt-get install jq -y
 
-    - name: Fetch Pull Request events
-      run: |
-        curl -H "Accept: application/vnd.github+json" \
-        https://api.github.com/users/singhcod3r/events/public \
-        > events.json
+      - name: Fetch Pull Request events
+        run: |
+          curl -H "Accept: application/vnd.github+json" \
+          https://api.github.com/users/singhcod3r/events/public \
+          > events.json
 
-        jq -r '
-          map(select(.type == "PullRequestEvent")) 
-          | group_by(.repo.name | split("/")[0]) 
-          | map({org: .[0].repo.name | split("/")[0], prs: length}) 
-          | .[] 
-          | "- \(.org) (\(.prs) PRs)"
-        ' events.json > orgs.txt
+          jq -r '
+            map(select(.type == "PullRequestEvent")) 
+            | group_by(.repo.name | split("/")[0]) 
+            | map({org: .[0].repo.name | split("/")[0], prs: length}) 
+            | .[] 
+            | "- \(.org) (\(.prs) PRs)"
+          ' events.json > orgs.txt
 
-    - name: Update README
-      run: |
-        sed -i '/<!--START_CONTRIBUTIONS-->/, /<!--END_CONTRIBUTIONS-->/c\
+      - name: Update README
+        run: |
+          sed -i '/<!--START_CONTRIBUTIONS-->/, /<!--END_CONTRIBUTIONS-->/c\
 <!--START_CONTRIBUTIONS-->\n'"$(cat orgs.txt)"'\n<!--END_CONTRIBUTIONS-->' README.md
 
-    - name: Commit & Push updates
-      uses: stefanzweifel/git-auto-commit-action@v5
-      with:
-        commit_message: "🔄 Auto update organization contribution stats"
+      - name: Commit & Push updates
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🔄 Auto update organization contribution stats"
