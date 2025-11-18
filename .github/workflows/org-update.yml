@@ -14,28 +14,35 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install jq
-        run: sudo apt-get install jq -y
+        run: sudo apt-get update && sudo apt-get install jq -y
 
-      - name: Fetch Pull Request events
+      - name: Fetch PR Events
         run: |
-          curl -H "Accept: application/vnd.github+json" \
-          https://api.github.com/users/singhcod3r/events/public \
-          > events.json
+          curl -s -H "Accept: application/vnd.github+json" \
+          "https://api.github.com/users/singhcod3r/events/public" \
+          | jq -r '
+              map(select(.type == "PullRequestEvent")) 
+              | group_by(.repo.name | split("/")[0])
+              | map({org: .[0].repo.name | split("/")[0], prs: length})
+              | .[]
+              | "- \(.org) (\(.prs) PRs)"
+            ' > orgs.txt
 
-          jq -r '
-            map(select(.type == "PullRequestEvent")) 
-            | group_by(.repo.name | split("/")[0]) 
-            | map({org: .[0].repo.name | split("/")[0], prs: length}) 
-            | .[] 
-            | "- \(.org) (\(.prs) PRs)"
-          ' events.json > orgs.txt
-
-      - name: Update README
+      - name: Update README insert
         run: |
-          sed -i '/<!--START_CONTRIBUTIONS-->/, /<!--END_CONTRIBUTIONS-->/c\
-<!--START_CONTRIBUTIONS-->\n'"$(cat orgs.txt)"'\n<!--END_CONTRIBUTIONS-->' README.md
+          echo "<!--START_CONTRIBUTIONS-->" > update_section.txt
+          cat orgs.txt >> update_section.txt
+          echo "<!--END_CONTRIBUTIONS-->" >> update_section.txt
 
-      - name: Commit & Push updates
+      - name: Replace section in README
+        run: |
+          awk '
+            /<!--START_CONTRIBUTIONS-->/ {print; system("cat update_section.txt"); skip=1; next}
+            /<!--END_CONTRIBUTIONS-->/ {skip=0; next}
+            !skip
+          ' README.md > README_tmp.md && mv README_tmp.md README.md
+
+      - name: Commit & Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🔄 Auto update organization contribution stats"
+          commit_message: "🔄 Auto update org contribution stats"
