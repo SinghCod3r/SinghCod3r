@@ -60,9 +60,10 @@ What I do:
 
 | Work | Repo | Status |
 |------|------|--------|
+| Doc Improvement — Foomatic Lookup Site | https://github.com/rudra-iitm/foomatic-lookup-site/issues/4 | ✔ Merged |
 | UI Fixes — Foomatic Lookup Site | https://github.com/rudra-iitm/foomatic-lookup-site/pull/7 | ✔ Merged |
 | Config Updates — Medic CHT | https://github.com/medic/cht-conf/pull/730 | ✔ Merged |
-| Docs Improvements — Medic CHT Docs | https://github.com/medic/cht-docs/pull/1976 | ✔ Merged |
+
 
 ---
 
