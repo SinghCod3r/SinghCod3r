@@ -61,8 +61,11 @@ What I do:
 | Work | Repo | Status |
 |------|------|--------|
 | Doc Improvement — Foomatic Lookup Site | https://github.com/rudra-iitm/foomatic-lookup-site/issues/4 | ✔ Merged |
-| UI Fixes — Foomatic Lookup Site | https://github.com/rudra-iitm/foomatic-lookup-site/pull/7 | ✔ Merged |
+| Update - SpliX driver metadata | https://github.com/OpenPrinting/foomatic-db/pull/53 | ✔ Merged |
+| Fix dead upstream URL - c2050 | https://github.com/OpenPrinting/foomatic-db/pull/54 | ✔ Merged |
 | Config Updates — Medic CHT | https://github.com/medic/cht-conf/pull/730 | ✔ Merged |
+| Form Upload Error Handling | https://github.com/medic/cht-conf/issues/512 | ✔ Merged |
+| Performance Issue | https://github.com/medic/cht-conf/issues/561 | ✔ Merged |
 
 
 ---
@@ -71,8 +74,10 @@ What I do:
 
 | Issue | Repo | Status |
 |------|------|--------|
-| Form Upload Error Handling | https://github.com/medic/cht-conf/issues/512 | 🟢 Reviewed & Supported |
-| Performance Issue | https://github.com/medic/cht-conf/issues/561 | 🟢 Suggestions Shared |
+| Migrate from dead rkkda upstream | https://github.com/OpenPrinting/foomatic-db/pull/55 | 🟢 Reviewed & Supported |
+| Fix dead manufacturer URL | https://github.com/OpenPrinting/foomatic-db/pull/56 | 🟢 Suggestions Shared |
+| Add PPD generation, viewing, and download functionality | https://github.com/rudra-iitm/foomatic-lookup-site/pull/12 | 🟢 Suggestions Shared |
+
 
 ---
 
