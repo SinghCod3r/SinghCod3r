@@ -54,7 +54,28 @@ What I do:
 - UI Fixes  
 - New Features  
 - Documentation  
-- Community Support  
+- Community Support
+
+---
+
+## 🌍 Open Source Impact
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Open%20Source-Contributor-00D9FF?style=for-the-badge&logo=github"/>
+<img src="https://img.shields.io/badge/Linux-Contributor-00D9FF?style=for-the-badge&logo=linux"/>
+<img src="https://img.shields.io/badge/OpenPrinting-Contributor-00D9FF?style=for-the-badge&logo=linux"/>
+
+</p>
+
+> Contributing to real-world open source projects through bug fixes, features,
+> testing, debugging, documentation, and code reviews.
+
+**Focus Areas**
+
+`Linux` `OpenPrinting` `CUPS` `Python` `GTK` `DNS-SD` `IPP-over-USB` `Testing` `Debugging`
+
+---
 
 **Every PR teaches something new.**
 
