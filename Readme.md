@@ -64,9 +64,15 @@ What I do:
 
 | Work | Repo | Status |
 |------|------|--------|
+| Fix installation freezes / driver-loading crashes | https://github.com/OpenPrinting/system-config-printer/pull/463 | ✔ Merged |
+| Fix IPP-over-USB printer classification + regression tests | https://github.com/OpenPrinting/system-config-printer/pull/460 | ✔ Merged |
+| Delay displaying discovered devices until DNS-SD discovery completes | https://github.com/OpenPrinting/system-config-printer/pull/455 | ✔ Merged |
+| Integrate `theme.json` for block editor settings | https://github.com/wprig/wprig/pull/891 | ✔ Merged |
+| Fix mobile navigation and submenu toggling | https://github.com/wprig/wprig/pull/890 | ✔ Merged |
+| Accessibility fix — prevent hidden site branding output | https://github.com/wprig/wprig/pull/892 | ✔ Merged |
 | Doc Improvement — Foomatic Lookup Site | https://github.com/rudra-iitm/foomatic-lookup-site/issues/4 | ✔ Merged |
-| Update - SpliX driver metadata | https://github.com/OpenPrinting/foomatic-db/pull/53 | ✔ Merged |
-| Fix dead upstream URL - c2050 | https://github.com/OpenPrinting/foomatic-db/pull/54 | ✔ Merged |
+| Update — SpliX driver metadata | https://github.com/OpenPrinting/foomatic-db/pull/53 | ✔ Merged |
+| Fix dead upstream URL — c2050 | https://github.com/OpenPrinting/foomatic-db/pull/54 | ✔ Merged |
 | Config Updates — Medic CHT | https://github.com/medic/cht-conf/pull/730 | ✔ Merged |
 | Form Upload Error Handling | https://github.com/medic/cht-conf/issues/512 | ✔ Merged |
 | Performance Issue | https://github.com/medic/cht-conf/issues/561 | ✔ Merged |
